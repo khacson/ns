@@ -1,0 +1,1 @@
+﻿<div class="logo" style="margin-left:-16px;"><a href="<?=$server;?>"><img src="<?= url_tmpl() ?>img/gce-logo.png" alt="logo" /></a></div>

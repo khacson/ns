@@ -1,0 +1,43 @@
+
+
+Link: http://hre.firefuma.com/service/polling
+
+I: Máy chấm công hỏi server
+ {"machine_sn":"1"}
+
+II: Server trả về:
+
+1: Shutdown: 
+
+- Server Trả về: 
+	+ {"result":"ok","reponse":"","machine_sn":"1"} --> Ko Shutdown
+	+ {"result":"ok","reponse":"shutdown","machine_sn":"1"} --> shutdown
+	
+2. restart
+
+- Server Trả về: 
+	+ {"result":"ok","reponse":"","machine_sn":"1"} --> Ko restart
+	+ {"result":"ok","reponse":"restart","machine_sn":"1"} --> restart
+	
+	
+3. downloadEmployee
+
+- Server Trả về: 
+ + {"result":"ok","reponse":"","machine_sn":"1","data":[]} --> Ko có nhân viên nào mới
+ + {"result":"ok","reponse":"downloadEmployee","machine_sn":"1","data":[{"id":"2","data1":"0001","data2":"0002"},{"id":"8000","data1":"0001","data2":"0002"},{"id":"8001","data1":"0001","data2":"0002"},{"id":"8002","data1":"0001","data2":"0002"},{"id":"8003","data1":"0001","data2":"0002"},{"id":"8004","data1":"0001","data2":"0002"},{"id":"8005","data1":"0001","data2":"0002"},{"id":"8006","data1":"0001","data2":"0002"},{"id":"8007","data1":"0001","data2":"0002"},{"id":"8008","data1":"0001","data2":"0002"},{"id":"8009","data1":"0001","data2":"0002"},{"id":"8951","data1":"0001","data2":"0002"},{"id":"8959","data1":"0001","data2":"0002"},{"id":"9988","data1":"0001","data2":"0002"}]}  ---> Trả về danh sách nhân viên
+
+4. uploadEmployee
+
+- Server Trả về: 
+	+ {"result":"ok","reponse":"","machine_sn":"1"} --> Ko uploadEmployee
+	+ {"result":"ok","reponse":"uploadEmployee","machine_sn":"1"} --> uploadEmployee
+	Khi server trả về là upload thì máy chấm công chạy linh sau để upload data lên server
+	
+	http://hre.firefuma.com/service/uploadEmployee
+	
+	- Máy chấm công đẩy dữ liệu lên theo cấu trúc:	{"machine_sn":"1","data":[{"id":"2","data1":"0001","data2":"0002"},{"id":"8000","data1":"0001","data2":"0002"},{"id":"8001","data1":"0001","data2":"0002"},{"id":"8002","data1":"0001","data2":"0002"},{"id":"8003","data1":"0001","data2":"0002"},{"id":"8004","data1":"0001","data2":"0002"},{"id":"8005","data1":"0001","data2":"0002"},{"id":"8006","data1":"0001","data2":"0002"},{"id":"8007","data1":"0001","data2":"0002"},{"id":"8008","data1":"0001","data2":"0002"},{"id":"8009","data1":"0001","data2":"0002"},{"id":"8951","data1":"0001","data2":"0002"},{"id":"8959","data1":"0001","data2":"0002"},{"id":"9988","data1":"0001","data2":"0002"}]}
+	
+	- Server trả về 
+	 + {"result":"ok","reponse":"uploadEmployee","machine_sn":"1"} Upload thành công 
+	 + {"result":"no","reponse":"uploadEmployee","machine_sn":"1"} Upload không thành công
+	

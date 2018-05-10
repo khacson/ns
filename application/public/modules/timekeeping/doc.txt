@@ -1,0 +1,15 @@
+﻿- Dựa vào ca làm việc để lấy thời gian bắt đầu và kết thúc, và tính giờ tăng ca
+
+1. Xem trong ngày có tăng ca hay không?
+	- Bảng: hre_regovertime
+	- Chỉ lấy nhưng nhân viên được duyệt: approved = 1
+	
+2. Có đi công tác không?
+	- Bảng: hre_empleaveshow_detail
+	- Đi công tác: statusid = 2
+	
+3. Có nghỉ thai sản không?
+4. Có nghỉ phép không?
+
+==> Kiểm tra thời gian check vân tay
+hre_timesheets

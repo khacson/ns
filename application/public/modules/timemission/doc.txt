@@ -1,0 +1,2 @@
+Chấm công tác lưu chi tiết theo ngày
+hre_empleaveshow_detail

@@ -1,0 +1,7 @@
+ALTER TABLE `hre_employee` 
+ADD COLUMN `group_work_id` INT NULL AFTER `family_relation`;
+
+UPDATE `hre_menus` SET `processid`='0' WHERE `id`='25';
+UPDATE `hre_menus` SET `processid`='0' WHERE `id`='26';
+UPDATE `hre_menus` SET `processid`='0' WHERE `id`='56';
+
