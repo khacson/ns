@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="jquery.1.7.2.js" type="text/javascript"></script>
+<script src="jquery.multiple.select.js" type="text/javascript"></script>
+<link href="multiple-select.css" rel="stylesheet"/>
+</head>
+
+<body>
+	 <select id="capacity" style="width:200px;" multiple="multiple">
+        <option value="1">abc</option>
+        <option value="2">def</option>
+        <option value="3">789</option>
+    </select>
+    <script type="text/javascript">
+        $("select#capacity").multipleSelect({
+            filter: true
+        });
+    </script>
+</body>
+</html>

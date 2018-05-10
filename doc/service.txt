@@ -1,0 +1,34 @@
+
+
+Link: http://hre.firefuma.com/service/polling
+
+1: Shutdown: 
+
+- Máy chấm công hỏi lên server: {"result" : "OK", "request": "shutdown", "machine_sn":"1"}
+- Server Trả về: 
+	+ {"result":"ok","reponse":"","machine_sn":"1"} --> Ko Shutdown
+	+ {"result":"ok","reponse":"shutdown","machine_sn":"1"} --> shutdown
+	
+2. restart
+
+- Máy chấm công hỏi lên server: {"result" : "OK", "request": "restart", "machine_sn":"1"}
+- Server Trả về: 
+	+ {"result":"ok","reponse":"","machine_sn":"1"} --> Ko restart
+	+ {"result":"ok","reponse":"restart","machine_sn":"1"} --> restart
+	
+3. downloadEmployee
+
+- Máy chấm công hỏi lên server: {"result" : "OK", "request": "downloadEmployee", "machine_sn":"1"}
+- Server Trả về: 
+ + {"result":"ok","reponse":"","machine_sn":"1","data":[]} --> Ko có nhân viên nào mới
+ + {"result":"ok","reponse":"downloadEmployee","machine_sn":"1","data":[{"id":"2","data1":"0001","data2":"0002"},{"id":"8000","data1":"0001","data2":"0002"},{"id":"8001","data1":"0001","data2":"0002"},{"id":"8002","data1":"0001","data2":"0002"},{"id":"8003","data1":"0001","data2":"0002"},{"id":"8004","data1":"0001","data2":"0002"},{"id":"8005","data1":"0001","data2":"0002"},{"id":"8006","data1":"0001","data2":"0002"},{"id":"8007","data1":"0001","data2":"0002"},{"id":"8008","data1":"0001","data2":"0002"},{"id":"8009","data1":"0001","data2":"0002"},{"id":"8951","data1":"0001","data2":"0002"},{"id":"8959","data1":"0001","data2":"0002"},{"id":"9988","data1":"0001","data2":"0002"}]}  ---> Trả về danh sách nhân viên
+ 
+4. uploadEmployee
+   Với trường hợp này thì máy chấm công có vân tay mới thì mới up lên server, còn ko có thì thôi ko làm ji hết
+    - Máy châm công up lên server:
+     {"result":"ok","request":"uploadEmployee","machine_sn":"1","data":[{"id":"2","data1":"0001","data2":"0002"},{"id":"8000","data1":"0001","data2":"0002"},{"id":"8001","data1":"0001","data2":"0002"},{"id":"8002","data1":"0001","data2":"0002"},{"id":"8003","data1":"0001","data2":"0002"},{"id":"8004","data1":"0001","data2":"0002"},{"id":"8005","data1":"0001","data2":"0002"},{"id":"8006","data1":"0001","data2":"0002"},{"id":"8007","data1":"0001","data2":"0002"},{"id":"8008","data1":"0001","data2":"0002"},{"id":"8009","data1":"0001","data2":"0002"},{"id":"8951","data1":"0001","data2":"0002"},{"id":"8959","data1":"0001","data2":"0002"},{"id":"9988","data1":"0001","data2":"0002"}]}
+	
+	- Server trả về 
+	{"result":"ok","reponse":"uploadEmployee","machine_sn":"1","data":[{"id":"2","data1":"0001","data2":"0002"},{"id":"8000","data1":"0001","data2":"0002"},{"id":"8001","data1":"0001","data2":"0002"},{"id":"8002","data1":"0001","data2":"0002"},{"id":"8003","data1":"0001","data2":"0002"},{"id":"8004","data1":"0001","data2":"0002"},{"id":"8005","data1":"0001","data2":"0002"},{"id":"8006","data1":"0001","data2":"0002"},{"id":"8007","data1":"0001","data2":"0002"},{"id":"8008","data1":"0001","data2":"0002"},{"id":"8009","data1":"0001","data2":"0002"},{"id":"8951","data1":"0001","data2":"0002"},{"id":"8959","data1":"0001","data2":"0002"},{"id":"9988","data1":"0001","data2":"0002"}]]}
+	
+	Chuổi data server xử lý thành công

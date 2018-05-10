@@ -1,0 +1,197 @@
+.fancyboxForm.popup, .fancyboxForm .popup{ 
+		display: block;
+		background:#fff;
+	}
+.fancyboxForm input{ 
+    cursor: default !important; 
+	/*line-height:1.2;*/
+}
+.fancyboxForm #pushed_data{ 
+    cursor: pointer !important; 
+}
+.fancyboxForm textarea{ 
+    cursor: default;
+}
+.fancyboxForm label{	
+    color: #555;
+    text-align: left;
+}
+.col-md-4 .form-group label {	
+    text-align: left;
+	white-space: pre;
+}
+.fancyboxForm {
+    background: none repeat scroll 0 0 #fff;
+}
+ .fancyboxForm  .form-group {
+    margin-bottom: 0;
+}
+.fancyboxForm .modal-footer {
+    background: none repeat scroll 0 0 #006ead;
+}
+.fancyboxForm .caption{
+    font-size: 16px;
+}
+.fancyboxForm .col-md-11{
+    float: none;
+    margin: auto;
+}
+.fancyboxForm .caption i:before{
+    font-size: 17px;
+}
+.fa-file-text-o:before {
+    padding-right: 6px;
+}
+.control-label.col-md-3.dateRange {
+    white-space: nowrap;
+}
+
+
+#formSearchLogFile label{
+	padding-right:0;
+	text-align:left;
+}
+#searchMore{
+	color: #4d90fe;
+	text-shadow: none;
+}
+#searchMore:hover {
+	color: #0362fd ;
+}
+#log_file_total .pagination,
+#log_file_detail .pagination {
+    float: right;
+}
+#log_file_total table {
+    cursor: pointer;
+}
+
+#total_log_table_wrapper .row:nth-child(1), #total_log_table_wrapper .row:nth-child(3), #log_file_detail_table_wrapper .row:nth-child(1),
+#log_file_detail_table_wrapper .row:nth-child(3){
+    display: none;
+}
+/*
+.timepicker-orient-top, .datepicker{
+	z-index: 9999 !important;
+}
+*/
+.zindex, .timepicker-orient-top{
+	z-index: 9997;
+}
+.datetime-btn{
+	/*padding: 5px 14px;
+	font-size: 15px;*/
+}
+.datepicker table th {
+    color: #333;
+    font-family: "Open Sans" !important;
+    font-weight: 400 !important;
+	background: #fff !important;
+}
+.bootstrap-timepicker-widget input, .bootstrap-timepicker-widget input:focus {
+    border: 0 none;
+    outline: medium none !important;
+}
+.daily-cal-width{
+	width: 112%;
+}
+.detail-color {
+    color: #3cc051;
+}
+#statistics{
+	border-bottom: none;
+}
+.dropdown-toggle .dropdown-menu:before, .btn-group .dropdown-menu:before {
+    border-bottom: 8px solid #e0e0e0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    content: "";
+    display: inline-block !important;
+    position: absolute;
+    right: 9px;
+    top: -8px;
+}
+.dropdown-toggle .dropdown-menu:after, .btn-group .dropdown-menu:after {
+    border-bottom: 7px solid #fff;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    content: "";
+    display: inline-block !important;
+    position: absolute;
+    right: 10px;
+    top: -7px;
+}
+.dropdown-toggle .dropdown-menu, .btn-group .dropdown-menu {
+    margin-top: 10px;
+}
+.dropdown-menu li > a:hover, .dropdown-menu .active > a, .dropdown-menu .active > a:hover {
+    background-color: #4d90fe;
+    color: white;
+    text-shadow: none;
+}
+.ui-widget-content {
+    background: url("images/ui-bg_highlight-soft_100_eeeeee_1x100.png") repeat-x scroll 50% top #eeeeee;
+    border: 1px solid #dddddd;
+    color: #333333;
+}
+.ui-widget {
+    font-family:"Open Sans",sans-serif;
+}
+.ui-menu {
+    display: block;
+    list-style: none outside none;
+    margin: 0;
+    outline: medium none;
+    padding: 0;
+}
+.ui-autocomplete {
+    cursor: default;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.ui-front {
+    z-index: 100;
+}
+.ui-menu .ui-menu-item {
+    cursor: pointer;
+    list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+    margin: 0;
+    min-height: 0;
+    padding: 3px 1em 3px 0.4em;
+    position: relative;
+}
+.ui-menu .ui-state-focus,
+.ui-menu .ui-state-active {
+	margin: -1px;
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+	color: #c77405;
+}
+.ui-state-hover a,
+.ui-state-hover a:hover,
+.ui-state-hover a:link,
+.ui-state-hover a:visited,
+.ui-state-focus a,
+.ui-state-focus a:hover,
+.ui-state-focus a:link,
+.ui-state-focus a:visited {
+	color: #c77405;
+	text-decoration: none;
+}
+.ui-state-hover .ui-icon,
+.ui-state-focus .ui-icon {
+
+}
+/* edit */
+/* .multiple > label {
+    margin-left: 18px;
+} */
+.ms-parent .ms-drop input[type="checkbox"] {
+    vertical-align: top;
+}
